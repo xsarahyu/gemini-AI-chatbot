@@ -44,6 +44,7 @@ backend
 <br>
 <br>
 
+# 🧪 Testing
 ## Unit & Integration Tests — Using Jest
 To run Jest tests locally:
 1. Navigate to the frotnend directory: `cd app`
