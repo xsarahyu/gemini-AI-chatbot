@@ -4,22 +4,36 @@
 Welcome to the **AI Chatbot**! This application allows users to interact with an AI-powered chatbot using natural language. Built with React, Node, Express, and Google's Generative AI, it offers a seamless experience for engaging in conversations with an intelligent virtual assistant.
 
 ## ⭐ Features
-- 🔐 User Authentication: Users can create an account or log in securely using a Google account.
+- 🔐 User Authentication: Users can create an account or log in securely using a Google account. *Please note that only Google login works currently.*
 - 💬 Real-time Messaging: Users can engage in real-time conversations with the AI chatbot, receiving instant responses to their queries.
 - 🤖 AI-powered Responses: The chatbot utilizes Google's Generative AI technology to generate intelligent responses based on user input.
 - 🔒 Secure Communication: All user interactions are encrypted to ensure privacy and security.
 - 🌐 Multi-platform Compatibility: The application is compatible across various platforms, including web browsers and mobile devices.
 - ⚙️ Customizable Settings: Users can personalize their chat experience by adjusting settings such as language preferences and conversation themes.
 
+## 🖼️ Preview
+### Landing page
+<img src="landing_page.png" width="500">
+
+### Login page
+<img src="login_page.png" width="500">
+
+### Messaging page
+<img src="messaging_page.png" width="500">
+
 ## 🚀 Getting Started
 1. Clone the repository: `git clone https://github.com/xsarahyu/AI-chatbot.git`
 2. Navigate to the backend directory: `cd backend`
-3. Install backend dependencies: `npm install`
-4. Run the backend: `node server`
-5. Navigate to the frontend directory (in a new terminal): `cd app`
-6. Install frontend dependencies: `npm install`
-7. Run the frontend: `npm run dev`
-4. The app is now live at http://localhost:5173!
+3. Create an .env file with the following information:
+```
+
+```
+4. Install backend dependencies: `npm install`
+5. Run the backend: `node server`
+6. Navigate to the frontend directory (in a new terminal): `cd app`
+7. Install frontend dependencies: `npm install`
+8. Run the frontend: `npm run dev`
+9. The app is now live at http://localhost:5173!
 
 ## 🗂️ File Structure
 ```
