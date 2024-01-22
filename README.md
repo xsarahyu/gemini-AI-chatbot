@@ -26,7 +26,11 @@ Welcome to the **AI Chatbot**! This application allows users to interact with an
 2. Navigate to the backend directory: `cd backend`
 3. Create an .env file with the following information:
 ```
-
+clientID=783956386133-3nvk3hbqk5v7hl0hprp6f540hoo6bnk7.apps.googleusercontent.com
+clientSecret=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
+secret=foobar
+PORT=8420
+geminiKey=AIzaSyA-V8AaFMOeYmVoa_ibSikN9X3VVXXJHm8
 ```
 4. Install backend dependencies: `npm install`
 5. Run the backend: `node server`
@@ -59,7 +63,7 @@ backend
 <br>
 
 # 🧪 Testing
-## Unit & Integration Tests — Using Jest
+## Unit Tests — Using Jest
 To run Jest tests locally:
 1. Navigate to the frotnend directory: `cd app`
 2. Install frontend dependencies: `npm install`
