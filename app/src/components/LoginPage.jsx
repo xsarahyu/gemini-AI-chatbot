@@ -53,7 +53,9 @@ const LoginPage = () => {
             </button>
           </div>
           <div className="flex justify-center mt-5">
-            <GoogleButton onClick={() => { window.open("http://localhost:8420/google") }} />
+            <GoogleButton
+              data-testid="googleLoginButton"
+              onClick={() => { window.open("http://localhost:8420/google") }} />
           </div>
         </form>
       </div>

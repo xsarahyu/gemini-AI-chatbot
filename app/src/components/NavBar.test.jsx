@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import NavBar from './NavBar'
 
 describe('NavBar component', () => {
-  test('Renders NavBar', () => {
+  test('Renders NavBar content', () => {
     const { getByTestId } = render(
       <BrowserRouter>
         <NavBar />

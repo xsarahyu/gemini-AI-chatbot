@@ -1,20 +1,38 @@
-import { BrowserRouter, render, fireEvent } from '@testing-library/react'
+import { BrowserRouter, render, fireEvent, getByTestId } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import LoginPage from './LoginPage.jsx'
 
-describe('Login page component', () => {
-  test('Renders Login page ', () => {
-    const { getByTestId } = render(
+describe('LoginPage component', () => {
+  test('Renders Login page content', () => {
+    const { getById, getByTestId } = render(
       <BrowserRouter>
         <LoginPage />
       </BrowserRouter>
     )
 
-    const username = getByTestId('username')
+    const username = getById('username')
     expect(username).toBeInTheDocument()
 
+    const password = getById('password')
+    expect(password).toBeInTheDocument()
+
+    const loginButton = getByTestId('loginButton')
+    expect(loginButton).toBeInTheDocument()
+
+    const googleLoginButton = getByTestId('googleLoginButton')
+    expect(googleLoginButton).toBeInTheDocument()
+  }),
+
+  test('Sign In button redirects user to /messages page', () => {
+    const { getByTestId, history } = render(
+      <BrowserRouter>
+        <LoginPage />
+      </BrowserRouter>
+    )
+
+    const loginButton = getByTestId('loginButton')
+    fireEvent.click(loginButton)
+
+    expect(history.location.pathname).toBe('/messages')
   })
 })
-
-// click of button redirects you to messages
-// that the landing page renders, test for content on DOM
