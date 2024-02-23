@@ -3,18 +3,18 @@ import '@testing-library/jest-dom'
 import LoginPage from './LoginPage.jsx'
 
 describe('Login page component', () => {
-    test('renders login page ', () => {
-        const { getByTestId } = render(
-            <BrowserRouter>
-                <LoginPage />
-            </BrowserRouter>
-        );
+  test('Renders Login page ', () => {
+    const { getByTestId } = render(
+      <BrowserRouter>
+        <LoginPage />
+      </BrowserRouter>
+    )
 
-        const username = getByTestId('username');
-        expect(username).toBeInTheDocument();
+    const username = getByTestId('username')
+    expect(username).toBeInTheDocument()
 
-    })
+  })
 })
 
 // click of button redirects you to messages
-// that the landing page renders , test for content on DOM
+// that the landing page renders, test for content on DOM
