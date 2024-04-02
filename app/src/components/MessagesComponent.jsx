@@ -1,52 +1,63 @@
-import React, { useState } from 'react';
+import { useState } from 'react'
 
 let initMessages = [
-  {id: 1, content: "first message"},
-  {id: 2, content: "second message"},
-  {id: 3, content: "third message"},
-  {id: 4, content: "fourth message"},
-  {id: 5, content: "fifth message"},
-];
+  { id: 1, content: "Hello" },
+  { id: 2, content: "What is Leon's real name?" }
+]
 
-const Message = ({content}) => {
-  return <li>{content}</li>;
-};
+const Message = ({ content }) => {
+  return (
+    <p className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 mb-2 w-fit ml-auto">
+      {content}
+    </p>
+  )
+}
 
-const MessageForm = ({addMessageHandler}) => {
-  const [content, setContent] = useState('');
+const MessageForm = ({ addMessageHandler }) => {
+  const [content, setContent] = useState('')
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    addMessageHandler(content);
-    setContent('');
-  };
+    e.preventDefault()
+    addMessageHandler(content)
+    setContent('')
+  }
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <input value={content} onChange={(e) => setContent(e.target.value)} />
-        <button type="submit">Send</button>
-      </form>
-    </>
-  );
-};
+    <form onSubmit={handleSubmit} className="mt-4">
+      <input
+        placeholder="Type your message here..."
+        value={content}
+        onChange={(e) => setContent(e.target.value)}
+        className="bg-white text-black px-4 py-2 rounded-lg mr-2 border border-gray-300"
+      />
+      <button
+        type="submit"
+        className="bg-gray-800 text-white px-4 py-2 rounded-lg border border-gray-800"
+      >
+        Send
+      </button>
+    </form>
+  )
+}
 
 const MessagesComponent = () => {
-  const [messages, setMessages] = useState(initMessages);
+  const [messages, setMessages] = useState(initMessages)
 
   const addNewMessage = (content) => {
-    const newMessage = { id: messages.length + 1, content };
-    setMessages([...messages, newMessage]);
-  };
+    const newMessage = { id: messages.length + 1, content }
+    setMessages([...messages, newMessage])
+  }
 
   return (
-    <>
-      <ul>
+    <div className="flex justify-center items-center py-14">
+      <div
+        className="w-3/4 rounded-lg border border-gray-300 p-6"
+        style={{ height: '34rem' }}>
         {messages.map(message => <Message key={message.id} content={message.content} />)}
-      </ul>
-      <MessageForm addMessageHandler={addNewMessage} />
-    </>
-  );
-};
+        <MessageForm addMessageHandler={addNewMessage} />
+      </div>
+    </div>
+  )
+}
 
-export default MessagesComponent;
+export default MessagesComponent
