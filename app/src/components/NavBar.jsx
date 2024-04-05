@@ -1,18 +1,34 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import Skull from '../assets/skull.png'
 
 const NavBar = () => {
   return (
-    <nav className="bg-rc-red py-4">
-      <ul className="flex justify-center">
-        <li className="mx-4">
-          <Link to="/" className="text-white text-2xl hover:text-gray-300">Home</Link>
+    <nav className="bg-rc-red py-2 flex items-center px-44">
+      <div>
+        <img src={Skull} className="w-14"/>
+      </div>
+      <ul className="flex justify-center flex-1">
+        <li className="mx-6">
+          <Link
+            to="/"
+            className="text-white uppercase hover:underline"
+            style={{ fontSize: '26px' }}
+          >
+            Home
+          </Link>
         </li>
-        <li className="mx-4">
-          <Link to="/login" className="text-white text-2xl hover:text-gray-300">Login</Link>
+        <li className="mx-6">
+          <Link
+            to="/login"
+            className="text-white uppercase hover:underline"
+            style={{ fontSize: '26px' }}
+          >
+            Login
+          </Link>
         </li>
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar
