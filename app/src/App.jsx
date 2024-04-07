@@ -3,6 +3,8 @@ import LandingPage from './components/LandingPage';
 import LoginPage from './components/LoginPage';
 import MessagesComponent from './components/MessagesComponent';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer'
+
 
 const App = () => {
   return (
@@ -13,7 +15,9 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/messages" element={<MessagesComponent />} />
       </Routes>
+      <Footer />
     </Router>
+    
   );
 };
 
