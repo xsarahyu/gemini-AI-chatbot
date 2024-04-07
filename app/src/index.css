@@ -8,18 +8,8 @@ h1, h2, h3, h4, h5, h6, nav {
   font-family: "League Gothic";
 }
 
-.flex {
-  display: flex;
-}
-.justify-center {
-  justify-content: center;
-}
-.items-center {
-  align-items: center;
-}
-.h-screen {
-  height: 100vh;
-}
+
+
 
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
