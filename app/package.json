@@ -6,12 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "cypress:open": "cypress open",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "jest"
   },
-  "jest":{
-    "testEnvironment": "jsdom"
+  "jest": {
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/mocks/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/src/mocks/fileMock.js"
+    }
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -27,6 +32,7 @@
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
+    "cypress": "^13.7.2",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
