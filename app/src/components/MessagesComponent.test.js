@@ -7,11 +7,11 @@ describe('Messages component', () => {
     test('renders Message content', () => {
         const { getByTestId, getByText } = render(<MessagesComponent />)
 
-        const inputField = getByTestId('message-input');
+        const inputField = getByTestId('messageInput');
 
         fireEvent.change(inputField, { target: { value: 'hello' } });
 
-        const sendButton = getByTestId('message-submit');
+        const sendButton = getByTestId('submitMessageButton');
         fireEvent.click(sendButton);
 
         const messageContent = getByText("hello")
@@ -27,7 +27,7 @@ describe('Messages component', () => {
     test('if send button exist', () => {
         const { getByTestId} = render(<MessagesComponent />)
 
-        const submitBtn = getByTestId('message-submit')
+        const submitBtn = getByTestId('submitMessageButton')
 
         expect(submitBtn).toBeInTheDocument()
     })
