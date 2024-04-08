@@ -7,7 +7,7 @@ const LoginPage = () => {
     <div>
       <h1>Login Page</h1>
       {/* Include a form here for future use */}
-      <button onClick={() => navigate("/messages")}>Login</button>
+      <button id="loginButton" onClick={() => navigate("/messages")}>Login</button>
     </div>
   );
 };
