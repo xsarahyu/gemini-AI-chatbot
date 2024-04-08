@@ -1,0 +1,12 @@
+describe('Messages Page', () => {
+  it('Message page can be opened and a message can be posted', () => {
+    const message = 'Test message'
+    cy.visit('http://localhost:5173')
+    cy.get('#loginNavBarButton').click()
+    cy.get('#loginButton').click()
+    cy.url().should('eq', 'http://localhost:5173/messages')
+    cy.get('#messageInput').type(message)
+    cy.get('#submitMessageButton').click()
+    cy.contains('#postedMessage', message).should('be.visible')
+  })
+})

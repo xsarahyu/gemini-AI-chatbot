@@ -7,7 +7,7 @@ let initMessages = [
 
 const Message = ({ content }) => {
   return (
-    <p className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 mb-2 w-fit ml-auto">
+    <p id="postedMessage" className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 mb-2 w-fit ml-auto">
       {content}
     </p>
   )

@@ -19,6 +19,7 @@ const NavBar = () => {
         </li>
         <li className="mx-6">
           <Link
+            id="loginNavBarButton"
             to="/login"
             className="text-white uppercase hover:underline"
             style={{ fontSize: '26px' }}
