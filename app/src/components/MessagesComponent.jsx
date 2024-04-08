@@ -25,14 +25,14 @@ const MessageForm = ({ addMessageHandler }) => {
   return (
     <form onSubmit={handleSubmit} className="mt-4">
       <input
-        id="messageInput"
+        data-testid="messageInput"
         placeholder="Type your message here..."
         value={content}
         onChange={(e) => setContent(e.target.value)}
         className="bg-white text-black px-4 py-2 rounded-lg mr-2 border border-gray-300"
       />
       <button
-        id="submitMessageButton"
+        data-testid="submitMessageButton"
         type="submit"
         className="bg-gray-800 text-white px-4 py-2 rounded-lg border border-gray-800"
       >
