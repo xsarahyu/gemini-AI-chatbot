@@ -7,7 +7,7 @@ let initMessages = [
 
 const Message = ({ content }) => {
   return (
-    <p className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 mb-2 w-fit ml-auto">
+    <p id="postedMessage" className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 mb-2 w-fit ml-auto">
       {content}
     </p>
   )
@@ -25,12 +25,14 @@ const MessageForm = ({ addMessageHandler }) => {
   return (
     <form onSubmit={handleSubmit} className="mt-4">
       <input
+        id="messageInput"
         placeholder="Type your message here..."
         value={content}
         onChange={(e) => setContent(e.target.value)}
         className="bg-white text-black px-4 py-2 rounded-lg mr-2 border border-gray-300"
       />
       <button
+        id="submitMessageButton"
         type="submit"
         className="bg-gray-800 text-white px-4 py-2 rounded-lg border border-gray-800"
       >
