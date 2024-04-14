@@ -5,6 +5,12 @@ import express from 'express'
 import passport from 'passport'
 import session from 'express-session'
 
+import { GoogleGenerativeAI } from "@google/generative-ai"
+
+// Access your API key as an environment variable (see "Set up your API key" above)
+const genAI = new GoogleGenerativeAI(process.env.geminiKey);
+
+
 const app = express();
 const PORT = process.env.PORT
 app.use(cors({credentials: true, origin: true}))
@@ -78,6 +84,18 @@ app.get("/logout", (req, res) => {
   });
 });
 
+const talkToAi = async (text) => {
+  const model = genAI.getGenerativeModel({ model: "gemini-pro"})
+  const result = await model.generateContent(text)
+  const response = await result.response
+  return response.text()
+}
 
+app.post("/api", isLoggedIn, async (req, res) => {
+  const text = req.body.text
+  const resp = await talkToAi(text)
+  res.json({message: resp})
+})
 
 app.listen(PORT, () => console.log("server running on port" + PORT))
+
