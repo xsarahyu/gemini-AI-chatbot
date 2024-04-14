@@ -13,6 +13,7 @@ const NavBar = () => {
             to="/"
             className="text-white uppercase hover:underline"
             style={{ fontSize: '26px' }}
+            data-testid='homeLink'
           >
             Home
           </Link>
@@ -22,6 +23,7 @@ const NavBar = () => {
             to="/login"
             className="text-white uppercase hover:underline"
             style={{ fontSize: '26px' }}
+            data-testid='loginLink'
           >
             Login
           </Link>
