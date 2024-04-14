@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import GoogleButton from 'react-google-button'
 
 
 const LoginPage = () => {
@@ -55,6 +56,7 @@ const LoginPage = () => {
     </div>
   </form>
 </div>
+  <GoogleButton onClick={() => { window.open("http://localhost:8420/google") }} />
 </div>
 
     
