@@ -2,19 +2,21 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 let initMessages = [
-  { id: 1, content: "Hello" },
-  { id: 2, content: "What is Leon's real name?" }
 ]
 
-const Message = ({ content }) => {
+let initResponses= [
+]
+
+const Message = ({ content, isResponse }) => {
+  const style = `bg-gray-100 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 mb-2 w-fit m${isResponse ? 'r' : 'l'}-auto`
   return (
-    <p id="postedMessage" className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 mb-2 w-fit ml-auto">
+    <p id="postedMessage" className={style}>
       {content}
     </p>
   )
 }
 
-const MessageForm = ({ addMessageHandler }) => {
+const MessageForm = ({ addMessageHandler, isDisabled }) => {
   const [content, setContent] = useState('')
 
   const handleSubmit = (e) => {
@@ -25,6 +27,7 @@ const MessageForm = ({ addMessageHandler }) => {
 
   return (
     <form onSubmit={handleSubmit} className="mt-4">
+    <fieldset disabled={isDisabled}>
       <input
         data-testid="messageInput"
         placeholder="Type your message here..."
@@ -39,13 +42,17 @@ const MessageForm = ({ addMessageHandler }) => {
       >
         Send
       </button>
+    </fieldset>
     </form>
   )
 }
 
 const MessagesComponent = () => {
+  const [responseLoading, setResponseLoading] = useState(false)
   const [messages, setMessages] = useState(initMessages)
+  const [responses, setResponses] = useState(initResponses)
   const [userData, setUserData] = useState('')
+
   useEffect(() => {
     getUserData()
   }, [])
@@ -55,13 +62,34 @@ const MessagesComponent = () => {
     .then(resp => {
       const { data } = resp;
       setUserData(data.username)
-      console.log(data)
     })
   }
 
-  const addNewMessage = (content) => {
+  const addNewMessage = async (content) => {
+    setResponseLoading(true)
     const newMessage = { id: messages.length + 1, content }
     setMessages([...messages, newMessage])
+
+    const loadingResponse = { id: newMessage.id, content: 'loading AI response...' }
+    setResponses([...responses, loadingResponse])
+
+    const { data } = await axios({
+      url:'http://localhost:8420/api', 
+      method: 'post', 
+      withCredentials: true,
+      data: { text: content },
+    })
+    const newResponse = { id: newMessage.id, content: data.message }
+    console.log(newResponse)
+    const newResponses = responses.map((c,i) => {
+      if(i == c.id - 1){
+        return newResponse
+      } else {
+        return c
+      }
+    })
+    setResponses([...responses, newResponse])
+    setResponseLoading(false)
   }
 
   return (
@@ -70,8 +98,16 @@ const MessagesComponent = () => {
         className="w-3/4 rounded-lg border border-gray-300 p-6"
         style={{ height: '34rem' }}>
         <p className=''> logged in as {userData} </p>
-        {messages.map(message => <Message key={message.id} content={message.content} />)}
-        <MessageForm addMessageHandler={addNewMessage} />
+        {messages.map(message => {
+          const response = responses[message.id - 1]
+          return(
+            <>
+            <Message isRepsonse={false} key={message.id} content={message.content} />
+            <Message isResponse={true} key={`r-${response.id}`} content={response.content} />
+            </>
+          )
+        })}
+        <MessageForm addMessageHandler={addNewMessage} isDisabled={responseLoading}/>
       </div>
     </div>
   )
