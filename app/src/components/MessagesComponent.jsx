@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 let initMessages = [
   { id: 1, content: "Hello" },
@@ -44,6 +45,19 @@ const MessageForm = ({ addMessageHandler }) => {
 
 const MessagesComponent = () => {
   const [messages, setMessages] = useState(initMessages)
+  const [userData, setUserData] = useState('')
+  useEffect(() => {
+    getUserData()
+  }, [])
+
+  const getUserData = () => {
+    axios({url:'http://localhost:8420/userdata', method: 'get', withCredentials: true})
+    .then(resp => {
+      const { data } = resp;
+      setUserData(data.username)
+      console.log(data)
+    })
+  }
 
   const addNewMessage = (content) => {
     const newMessage = { id: messages.length + 1, content }
@@ -55,6 +69,7 @@ const MessagesComponent = () => {
       <div
         className="w-3/4 rounded-lg border border-gray-300 p-6"
         style={{ height: '34rem' }}>
+        <p className=''> logged in as {userData} </p>
         {messages.map(message => <Message key={message.id} content={message.content} />)}
         <MessageForm addMessageHandler={addNewMessage} />
       </div>
