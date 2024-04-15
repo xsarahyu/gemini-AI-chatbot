@@ -61,7 +61,7 @@ backend
 <br>
 
 # 🧪 Testing
-## Unit & Integration Tests — Using Jest
+## Unit Tests — Using Jest
 To run Jest tests locally:
 1. Navigate to the frotnend directory: `cd app`
 2. Install frontend dependencies: `npm install`
@@ -73,7 +73,7 @@ To run Jest tests locally:
 https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/Footer.test.jsx#L5-L11
 
 ### 👉 LandingPage component
-#### Test #1: Verifies that the LandingPage component renders with the welcome message "Welcome to the Resilient Coders AI ChatBot!"
+#### Test #1: Verifies that the LandingPage component renders with the welcome message.
 https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/LandingPage.test.jsx#L5-L11
 
 ### 👉 LoginPage component
@@ -84,15 +84,15 @@ https://github.com/xsarahyu/AI-chatbot/blob/dec7b4ceae81b14b9551069142a5e3720fd5
 #### Test #1: Simulates entering text into the message input field, clicking the send button, and then verifies that the entered message renders.
 https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/MessagesComponent.test.jsx#L7-L18
 
-#### Test #2: Ensures that the message input field exists by searching for it based on its placeholder text "Type your message here...".
+#### Test #2: Ensures that the message input field exists.
 https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/MessagesComponent.test.jsx#L20-L25
 
-#### Test #3: Confirms the existence of the button to send a message by searching for it using its test id "submitMessageButton".
+#### Test #3: Confirms the existence of the button to send a message.
 https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/MessagesComponent.test.jsx#L27-L32
 
 ### 👉 NavBar component
-#### Test #1: Verifies that the NavBar renders properly by searching for a link with the test id "homeNavBarButton", which represents the "Home" link in the navigation bar. If the test passes, it confirms that the "Home" link is present in the NavBar.
-https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/NavBar.test.jsx#L6-L17
+#### Test #1: Verifies that the NavBar renders with the "Home" and "Login" links.
+https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/NavBar.test.jsx#L6-L20
 
 ## End-to-End Tests — Using Cypress
 1. Make sure that the frontend and backend are running, with all dependencies installed.
