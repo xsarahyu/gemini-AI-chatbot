@@ -1,7 +1,6 @@
 import 'dotenv/config'
-import passport from 'passport';
-import { Strategy } from 'passport-google-oauth20';
-
+import passport from 'passport'
+import { Strategy } from 'passport-google-oauth20'
 
 const conf = {
   clientID: process.env.clientID,
