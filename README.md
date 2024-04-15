@@ -92,7 +92,7 @@ https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f1
 
 ### 👉 NavBar component
 #### Test #1: Verifies that the NavBar renders with the "Home" and "Login" links.
-https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/NavBar.test.jsx#L6-L20
+https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/NavBar.test.jsx#L6-L17
 
 ## End-to-End Tests — Using Cypress
 1. Make sure that the frontend and backend are running, with all dependencies installed.
