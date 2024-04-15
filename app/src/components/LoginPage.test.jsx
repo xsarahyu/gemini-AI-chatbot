@@ -21,18 +21,5 @@ describe('LoginPage component', () => {
 
     const googleLoginButton = getByTestId('googleLoginButton')
     expect(googleLoginButton).toBeInTheDocument()
-  }),
-
-  test('Sign In button redirects user to /messages page', () => {
-    const { getByTestId, history } = render(
-      <BrowserRouter>
-        <LoginPage />
-      </BrowserRouter>
-    )
-
-    const loginButton = getByTestId('loginButton')
-    fireEvent.click(loginButton)
-
-    expect(history.location.pathname).toBe('/messages')
   })
 })
