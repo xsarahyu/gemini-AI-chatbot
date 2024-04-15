@@ -1,4 +1,4 @@
-import { BrowserRouter, render, fireEvent } from '@testing-library/react'
+import { BrowserRouter, render } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import LoginPage from './LoginPage.jsx'
 

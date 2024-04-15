@@ -13,5 +13,8 @@ describe('NavBar component', () => {
 
     const homeLink = getByTestId('homeNavBarButton')
     expect(homeLink).toBeInTheDocument()
+
+    const loginLink = getByTestId('loginNavBarButton')
+    expect(loginLink).toBeInTheDocument()
   })
 })
