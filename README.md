@@ -61,7 +61,7 @@ backend
 <br>
 
 # 🧪 Testing
-## Unit Tests — Using Jest
+## Unit & Integration Tests — Using Jest
 To run Jest tests locally:
 1. Navigate to the frotnend directory: `cd app`
 2. Install frontend dependencies: `npm install`
@@ -77,8 +77,8 @@ https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f1
 https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/LandingPage.test.jsx#L5-L11
 
 ### 👉 LoginPage component
-#### Test #1: Ensures that the LoginPage component renders with the test id "username", indicating that the username input field is present.
-https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/LoginPage.test.jsx#L5-L17
+#### Test #1: Ensures that the LoginPage component renders with the username and password input fields, the regular login button, and the Google login button.
+https://github.com/xsarahyu/AI-chatbot/blob/dec7b4ceae81b14b9551069142a5e3720fd56480/app/src/components/LoginPage.test.jsx#L6-L24
 
 ### 👉 MessagesComponent
 #### Test #1: Simulates entering text into the message input field, clicking the send button, and then verifies that the entered message renders.
