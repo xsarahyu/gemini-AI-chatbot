@@ -4,12 +4,12 @@
 Welcome to the **AI Chatbot**! This application allows users to interact with an AI-powered chatbot using natural language. Built with React, Node, Express, and Google's Generative AI, it offers a seamless experience for engaging in conversations with an intelligent virtual assistant.
 
 ## ⭐ Features
-- 🔐 User Authentication: Users can create an account or log in securely using a Google account. *Please note that only Google login works currently.*
-- 💬 Real-time Messaging: Users can engage in real-time conversations with the AI chatbot, receiving instant responses to their queries.
-- 🤖 AI-powered Responses: The chatbot utilizes Google's Generative AI technology to generate intelligent responses based on user input.
-- 🔒 Secure Communication: All user interactions are encrypted to ensure privacy and security.
-- 🌐 Multi-platform Compatibility: The application is compatible across various platforms, including web browsers and mobile devices.
-- ⚙️ Customizable Settings: Users can personalize their chat experience by adjusting settings such as language preferences and conversation themes.
+- 🔐 **User Authentication**: Users can create an account or log in securely using a Google account. *Please note that only Google login works currently.*
+- 💬 **Real-time Messaging**: Users can engage in real-time conversations with the AI chatbot, receiving instant responses to their queries.
+- 🤖 **AI-powered Responses**: The chatbot utilizes Google's Generative AI technology to generate intelligent responses based on user input.
+- 🔒 **Secure Communication**: All user interactions are encrypted to ensure privacy and security.
+- 🌐 **Multi-platform Compatibility**: The application is compatible across various platforms, including web browsers and mobile devices.
+- ⚙️ **Customizable Settings**: Users can personalize their chat experience by adjusting settings such as language preferences and conversation themes.
 
 ## 🖼️ Preview
 ### Landing page
