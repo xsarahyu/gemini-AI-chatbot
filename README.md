@@ -78,7 +78,7 @@ https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f1
 
 ### 👉 LoginPage component
 #### Test #1: Ensures that the LoginPage component renders with the username and password input fields, the regular login button, and the Google login button.
-https://github.com/xsarahyu/AI-chatbot/blob/dec7b4ceae81b14b9551069142a5e3720fd56480/app/src/components/LoginPage.test.jsx#L6-L24
+https://github.com/xsarahyu/AI-chatbot/blob/fea7673031c7fca4d907e1df069cd2e6fc80fd94/app/src/components/LoginPage.test.jsx#L5-L25
 
 ### 👉 MessagesComponent
 #### Test #1: Simulates entering text into the message input field, clicking the send button, and then verifies that the entered message renders.
