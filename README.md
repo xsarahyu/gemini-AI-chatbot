@@ -13,13 +13,13 @@ Welcome to the **AI Chatbot**! This application allows users to interact with an
 
 ## 🖼️ Preview
 ### Landing page
-<img src="landing_page.png" width="500">
+<img src="landing_page.png" width="600">
 
 ### Login page
-<img src="login_page.png" width="500">
+<img src="login_page.png" width="600">
 
 ### Messaging page
-<img src="messaging_page.png" width="500">
+<img src="messaging_page.png" width="600">
 
 ## 🚀 Getting Started
 1. Clone the repository: `git clone https://github.com/xsarahyu/AI-chatbot.git`
