@@ -108,10 +108,10 @@ The following steps occur in the Cypress test runner:
 7. To run other test files, navigate back to the main page by selecting the "Specs" label in the sidebar.
 8. From the main page, you can select and run other test files one by one.
 
-### 👉 loginpage
+### 👉 login_page
 #### This test suite ensures that the login page can be accessed from the homepage, and checks for the presence of username and password input fields on the login page.
 https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/cypress/e2e/loginpage.cy.js#L1-L10
 
-### 👉 messagesPage
+### 👉 messages_page
 #### This test suite ensures that users can navigate to the messages page and post a message. It also verifies that the posted message is displayed on the page.
 https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/cypress/e2e/messagesPage.cy.js#L1-L12
