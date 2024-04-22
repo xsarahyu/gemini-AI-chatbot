@@ -69,7 +69,7 @@ const MessagesComponent = () => {
 
     const loadingResponse = { id: newMessage.id, content: 'loading AI response...' }
     setResponses([...responses, loadingResponse])
-
+    console.log("axios is running")
     const { data } = await axios({
       url: 'http://localhost:8420/api',
       method: 'post',
@@ -97,10 +97,10 @@ const MessagesComponent = () => {
           {messages.map((message) => {
             const response = responses[message.id - 1]
             return (
-              <>
-                <Message isResponse={false} key={message.id} content={message.content} />
+              <div key={message.id} >
+                <Message isResponse={false} content={message.content} />
                 <Message isResponse key={`r-${response.id}`} content={response.content} />
-              </>
+              </div>
             )
           })}
         </div>

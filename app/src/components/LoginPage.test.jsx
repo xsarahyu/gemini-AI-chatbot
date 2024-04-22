@@ -1,25 +1,40 @@
-import { BrowserRouter, render } from '@testing-library/react'
+import { render } from '@testing-library/react'
+import { BrowserRouter } from 'react-router-dom'
 import '@testing-library/jest-dom'
-import LoginPage from './LoginPage.jsx'
+import LoginPage from './LoginPage'
 
 describe('LoginPage component', () => {
-  test('Renders Login page content', () => {
-    const { getById, getByTestId } = render(
+  let renderedComponent;
+
+  beforeEach(() => {
+    renderedComponent = render(
       <BrowserRouter>
         <LoginPage />
       </BrowserRouter>
-    )
+    );
+  });
 
-    const username = getById('username')
-    expect(username).toBeInTheDocument()
+  test('Renders username input', () => {
+    const { getByTestId } = renderedComponent;
+    const username = getByTestId('username');
+    expect(username).toBeInTheDocument();
+  });
 
-    const password = getById('password')
-    expect(password).toBeInTheDocument()
+  test('Renders password input', () => {
+    const { getByTestId } = renderedComponent;
+    const password = getByTestId('password');
+    expect(password).toBeInTheDocument();
+  });
 
-    const loginButton = getByTestId('loginButton')
-    expect(loginButton).toBeInTheDocument()
+  test('Renders login button', () => {
+    const { getByTestId } = renderedComponent;
+    const loginButton = getByTestId('loginButton');
+    expect(loginButton).toBeInTheDocument();
+  });
 
-    const googleLoginButton = getByTestId('googleLoginButton')
-    expect(googleLoginButton).toBeInTheDocument()
-  })
-})
+  test('Renders Google login button', () => {
+    const { getByTestId } = renderedComponent;
+    const googleLoginButton = getByTestId('googleLoginButton');
+    expect(googleLoginButton).toBeInTheDocument();
+  });
+});
