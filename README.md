@@ -70,38 +70,38 @@ To run Jest tests locally:
 
 ### 👉 Footer component
 #### Test #1: Ensures that the Footer component renders with the text "Resilient Coders".
-https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/Footer.test.jsx#L5-L11
+https://github.com/xsarahyu/gemini-AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/Footer.test.jsx#L5-L11
 
 ### 👉 LandingPage component
 #### Test #1: Verifies that the LandingPage component renders with the welcome message.
-https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/LandingPage.test.jsx#L5-L11
+https://github.com/xsarahyu/gemini-AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/LandingPage.test.jsx#L5-L11
 
 ### 👉 LoginPage component
 #### Test #1: Ensures that the LoginPage component renders with the username input field.
-https://github.com/xsarahyu/AI-chatbot/blob/fb21df617d3dffdee3be497a66aa11bd98adbe2f/app/src/components/LoginPage.test.jsx#L17-L21
+https://github.com/xsarahyu/gemini-AI-chatbot/blob/fb21df617d3dffdee3be497a66aa11bd98adbe2f/app/src/components/LoginPage.test.jsx#L17-L21
 
 #### Test #2: LoginPage renders with the password input field.
-https://github.com/xsarahyu/AI-chatbot/blob/fb21df617d3dffdee3be497a66aa11bd98adbe2f/app/src/components/LoginPage.test.jsx#L23-L27
+https://github.com/xsarahyu/gemini-AI-chatbot/blob/fb21df617d3dffdee3be497a66aa11bd98adbe2f/app/src/components/LoginPage.test.jsx#L23-L27
 
 #### Test #3: LoginPage renders with the regular login button.
-https://github.com/xsarahyu/AI-chatbot/blob/fb21df617d3dffdee3be497a66aa11bd98adbe2f/app/src/components/LoginPage.test.jsx#L29-L33
+https://github.com/xsarahyu/gemini-AI-chatbot/blob/fb21df617d3dffdee3be497a66aa11bd98adbe2f/app/src/components/LoginPage.test.jsx#L29-L33
 
 #### Test #4: LoginPage renders with the Google login button.
-https://github.com/xsarahyu/AI-chatbot/blob/fb21df617d3dffdee3be497a66aa11bd98adbe2f/app/src/components/LoginPage.test.jsx#L35-L39
+https://github.com/xsarahyu/gemini-AI-chatbot/blob/fb21df617d3dffdee3be497a66aa11bd98adbe2f/app/src/components/LoginPage.test.jsx#L35-L39
 
 ### 👉 MessagesComponent
 #### Test #1: Simulates entering text into the message input field, clicking the send button, and then verifies that the entered message renders.
-https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/MessagesComponent.test.jsx#L7-L18
+https://github.com/xsarahyu/gemini-AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/MessagesComponent.test.jsx#L7-L18
 
 #### Test #2: Ensures that the message input field exists.
-https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/MessagesComponent.test.jsx#L20-L25
+https://github.com/xsarahyu/gemini-AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/MessagesComponent.test.jsx#L20-L25
 
 #### Test #3: Confirms the existence of the button to send a message.
-https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/MessagesComponent.test.jsx#L27-L32
+https://github.com/xsarahyu/gemini-AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/MessagesComponent.test.jsx#L27-L32
 
 ### 👉 NavBar component
 #### Test #1: Verifies that the NavBar renders with the "Home" and "Login" links.
-https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/NavBar.test.jsx#L6-L17
+https://github.com/xsarahyu/gemini-AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/NavBar.test.jsx#L6-L17
 
 ## End-to-End Tests — Using Cypress
 1. Make sure that the frontend and backend are running, with all dependencies installed.
@@ -119,8 +119,8 @@ The following steps occur in the Cypress test runner:
 
 ### 👉 login_page
 #### This test suite ensures that the login page can be accessed from the homepage, and checks for the presence of username and password input fields on the login page.
-https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/cypress/e2e/loginpage.cy.js#L1-L10
+https://github.com/xsarahyu/gemini-AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/cypress/e2e/loginpage.cy.js#L1-L10
 
 ### 👉 messages_page
 #### This test suite ensures that users can navigate to the messages page and post a message. It also verifies that the posted message is displayed on the page.
-https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/cypress/e2e/messagesPage.cy.js#L1-L12
+https://github.com/xsarahyu/gemini-AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/cypress/e2e/messagesPage.cy.js#L1-L12
