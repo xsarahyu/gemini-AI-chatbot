@@ -24,7 +24,7 @@ Welcome to the **AI Chatbot**! This application allows users to interact with an
 ## 🚀 Getting Started
 1. Clone the repository: `git clone https://github.com/xsarahyu/AI-chatbot.git`
 2. Navigate to the backend directory: `cd backend`
-3. Create an .env file with *your* Google API information:
+3. Create an .env file with *your* Gemini API information:
     ```
     clientID={your clientID}
     clientSecret={your clientSecret}
