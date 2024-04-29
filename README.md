@@ -1,7 +1,7 @@
 # 🤖💬 AI Chatbot
 
 ## 👋 Introduction
-Welcome to the **AI Chatbot**! This application allows users to interact with an AI-powered chatbot using natural language. Built with React, Node, Express, and Google's Generative AI, it offers a seamless experience for engaging in conversations with an intelligent virtual assistant.
+Welcome to the **AI Chatbot**! This application allows users to interact with an AI-powered chatbot using natural language. Built with React, Node, Express, and Gemini (Google's Generative AI), it offers a seamless experience for engaging in conversations with an intelligent virtual assistant.
 
 ## ⭐ Features
 - 🔐 **User Authentication**: Users can create an account or log in securely using a Google account. *Please note that only Google login works currently.*
@@ -24,14 +24,14 @@ Welcome to the **AI Chatbot**! This application allows users to interact with an
 ## 🚀 Getting Started
 1. Clone the repository: `git clone https://github.com/xsarahyu/AI-chatbot.git`
 2. Navigate to the backend directory: `cd backend`
-3. Create an .env file with the following information:
-```
-clientID=783956386133-3nvk3hbqk5v7hl0hprp6f540hoo6bnk7.apps.googleusercontent.com
-clientSecret=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
-secret=foobar
-PORT=8420
-geminiKey=AIzaSyA-V8AaFMOeYmVoa_ibSikN9X3VVXXJHm8
-```
+3. Create an .env file with *your* Google API information:
+    ```
+    clientID={your clientID}
+    clientSecret={your clientSecret}
+    secret={your secret}
+    PORT=8420
+    geminiKey={your geminiKey}
+    ```
 4. Install backend dependencies: `npm install`
 5. Run the backend: `node server`
 6. Navigate to the frontend directory (in a new terminal): `cd app`
@@ -77,8 +77,17 @@ https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f1
 https://github.com/xsarahyu/AI-chatbot/blob/c8ca1ae5431e7a7cb215a0bd574967c263f10b50/app/src/components/LandingPage.test.jsx#L5-L11
 
 ### 👉 LoginPage component
-#### Test #1: Ensures that the LoginPage component renders with the username and password input fields, the regular login button, and the Google login button.
-https://github.com/xsarahyu/AI-chatbot/blob/fea7673031c7fca4d907e1df069cd2e6fc80fd94/app/src/components/LoginPage.test.jsx#L5-L25
+#### Test #1: Ensures that the LoginPage component renders with the username input field.
+https://github.com/xsarahyu/AI-chatbot/blob/fb21df617d3dffdee3be497a66aa11bd98adbe2f/app/src/components/LoginPage.test.jsx#L17-L21
+
+#### Test #2: LoginPage renders with the password input field.
+https://github.com/xsarahyu/AI-chatbot/blob/fb21df617d3dffdee3be497a66aa11bd98adbe2f/app/src/components/LoginPage.test.jsx#L23-L27
+
+#### Test #3: LoginPage renders with the regular login button.
+https://github.com/xsarahyu/AI-chatbot/blob/fb21df617d3dffdee3be497a66aa11bd98adbe2f/app/src/components/LoginPage.test.jsx#L29-L33
+
+#### Test #4: LoginPage renders with the Google login button.
+https://github.com/xsarahyu/AI-chatbot/blob/fb21df617d3dffdee3be497a66aa11bd98adbe2f/app/src/components/LoginPage.test.jsx#L35-L39
 
 ### 👉 MessagesComponent
 #### Test #1: Simulates entering text into the message input field, clicking the send button, and then verifies that the entered message renders.
