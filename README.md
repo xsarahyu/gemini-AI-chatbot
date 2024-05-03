@@ -1,7 +1,7 @@
 # 🤖💬 Gemini AI Chatbot
 
 ## 👋 Introduction
-Welcome to the **Gemini AI Chatbot**! This application allows users to interact with an AI-powered chatbot using natural language. Built with React, Node, Express, and Gemini (Google's Generative AI), it offers a seamless experience for engaging in conversations with an intelligent virtual assistant.
+Welcome to the **Gemini AI Chatbot**! This application allows users to interact with an AI chatbot using natural language. Built with React, Node, Express, and Gemini (Google's Generative AI), it offers a seamless experience for engaging in conversations with an intelligent virtual assistant.
 
 ## ⭐ Features
 - 🔐 **User Authentication**: Users can create an account or log in securely using a Google account. *Please note that only Google login works currently.*
